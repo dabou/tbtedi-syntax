@@ -1,0 +1,26 @@
+{
+    "name": "tbtedi-syntax",
+    "displayName": "tbtedi-syntax",
+    "description": "Support TbtEdi Studio file",
+    "version": "0.0.1",
+    "publisher": "dabou",
+    "engines": {
+        "vscode": "^1.17.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "tbtedi",
+            "aliases": ["Tbtedi", "tbtedi"],
+            "extensions": [".cedsc",".ceguide",".celink",".swptable"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "tbtedi",
+            "scopeName": "source.celink",
+            "path": "./syntaxes/tbtedi.tmLanguage.json"
+        }]
+    }
+}

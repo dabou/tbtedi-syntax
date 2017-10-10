@@ -1,0 +1,48 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Tbtedi",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.tbtedi",
+				"match": "\\b(LINK|ELINK|LINKTABLE|ELINKTABLE)\\b"
+			},
+			{
+				"name": "entity.name.type",
+				"match": "\\b(TRIGGER|DECLARE|CONDITION)\\b"
+			},
+			{
+				"name": "entity.name.function",
+				"match": "\\b(IN|INX|INY|INP|OUT|OUTX|OUTY|OUTP|TEXT|X|Y|OPERATOR|VALUE|VAR|FCT)\\b"
+			},
+			{
+				"name": "constant.language.tbtedi",
+				"match": "\\b(CLR|INC|FCT|CONST|VAR|YMD|HM|SESSION|EACH|TRACE|UNB|UNZ|DATETIMET|SUM|DATE)\\b"
+			},
+			{
+				"name": "keyword.operator.tbtedi",
+				"match": "\\b(EQ|NE|LE|GE|LT|GT|ISNULL|ISNOTNULL)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.tbtedi",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.tbtedi",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.celink"
+}
