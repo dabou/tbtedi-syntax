@@ -28,7 +28,7 @@
 				"match": "\\b(TRIGGER|DECLARE|CONDITION)\\b"
 			},
 			{
-				"match": "\\b(IN|INX|INY|INP|INC|OUT|OUTX|OUTY|OUTP|TEXT|X|Y|OPERATOR|VALUE|VAR|FCT|FMTIN|FMTOUT|COUNTER|SPECIAL|CARD)\\b\\(",
+				"match": "\\b(IN|INX|INY|INP|INC|OUT|OUTX|OUTY|OUTP|TEXT|X|Y|OPERATOR|VALUE|VAR|FCT|FMTIN|FMTOUT|COUNTER|SPECIAL|CARD|CONST)\\b\\(",
 				"captures": {
 					"1": { "name": "entity.name.function.tbtedi" }
 		  		}
@@ -39,7 +39,7 @@
 			},
 			{
 				"name": "constant.language.tbtedi",
-				"match": "\\*\\b(CLR|INC|FCT|CONST|VAR|YMD|HM|SESSION|EACH|TRACE|UNH|UNB|UNZ|DATETIMET|SUM|DATE|SENDER|DESTINER|DOC|COUNTER|PERSIST)\\b"
+				"match": "\\*\\b(CLR|INC|FCT|CONST|VAR|YMD|HM|SESSION|EACH|TRACE|UNH|UNB|UNZ|DATETIMET|SUM|DATE|TIME|SENDER|DESTINER|DOC|COUNTER|PERSIST)\\b"
 			},
 			{
 				"name": "constant.language.operator.tbtedi",
