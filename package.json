@@ -8,7 +8,8 @@
         "vscode": "^1.17.0"
     },
     "categories": [
-        "Languages"
+        "Languages",
+        "Snippets"
     ],
     "contributes": {
         "languages": [{
@@ -21,6 +22,12 @@
             "language": "tbtedi",
             "scopeName": "source.celink",
             "path": "./syntaxes/tbtedi.tmLanguage.json"
-        }]
+        }],
+        "snippets": [
+            {
+                "language": "tbtedi",
+                "path": "./snippets/tbtedi.json"
+            }
+        ]
     }
 }

@@ -1,0 +1,12 @@
+{
+    "Operator": {
+        "prefix": "OPERATOR",
+        "body": "OPERATOR(${1|*EQ,*NE,*ISNULL|})",
+        "description": "Conditionnal opérators"
+    },
+    "Format": {
+        "prefix": "FMTIN",
+        "body": "FMTIN(D/${1|'CYMDhm','CYMD'|})",
+        "description": "Input format"
+    }
+}
