@@ -28,18 +28,18 @@
 				"match": "\\b(TRIGGER|DECLARE|CONDITION|FIELD)\\b"
 			},
 			{
-				"match": "\\b(IN|INX|INY|INP|INC|OUT|OUTX|OUTY|OUTP|TEXT|X|Y|OPERATOR|VALUE|VAR|FCT|FMTIN|FMTOUT|COUNTER|SPECIAL|CARD|CONST|NAME|TYPE|MIN|MAX|CHECKSUM|OCHECKSUM|ICHECKSUM|INDSC|OUTDSC|FMT|INZ)\\b\\(",
+				"match": "\\b(IN|INX|INY|INP|INC|OUT|OUTX|OUTY|OUTP|TEXT|X|Y|OPERATOR|VALUE|VAR|FCT|FMTIN|FMTOUT|COUNTER|SPECIAL|CARD|CONST|NAME|TYPE|MIN|MAX|CHECKSUM|OCHECKSUM|ICHECKSUM|INDSC|OUTDSC|FMT|INZ|FSEPARATOR)\\b\\(",
 				"captures": {
 					"1": { "name": "entity.name.function.tbtedi" }
 		  		}
 			},
 			{
 				"name": "constant.language.tbtedi",
-				"match": "\\*\\b(ROOT|FILE|MSG|PHYSICAL|FLAT)\\b"
+				"match": "\\*\\b(ROOT|FILE|MSG|PHYSICAL|FLAT|EDIFACT|AINSI|XML|TRADACOMS|CSV)\\b"
 			},
 			{
 				"name": "constant.language.tbtedi",
-				"match": "\\*\\b(CLR|INC|FCT|CONST|VAR|YMD|HM|SESSION|EACH|TRACE|UNH|UNB|UNZ|DATETIMET|SUM|DATE|TIME|SENDER|DESTINER|DOC|COUNTER|PERSIST)\\b"
+				"match": "\\*\\b(CLR|INC|FCT|CONST|VAR|YMD|HM|SESSION|EACH|TRACE|UNH|UNB|UNZ|DATETIMET|SUM|DATE|TIME|SENDER|DESTINER|DOC|COUNTER|PERSIST|COMMA|SEMICOLON)\\b"
 			},
 			{
 				"name": "constant.language.operator.tbtedi",
@@ -66,7 +66,7 @@
 				}
 			]
 		},
-		
+
 		"comments": {
 			"patterns": [
 				{ "match": "(//).*",
