@@ -17,7 +17,7 @@
 		"keywords": {
 			"patterns": [{
 				"name": "entity.name.class",
-				"match": "\\b(LINK|ELINK|LINKTABLE|ELINKTABLE|MESSAGE|EMESSAGE|RECORD|ERECORD)\\b"
+				"match": "\\b(LINK|ELINK|LINKTABLE|ELINKTABLE|MESSAGE|EMESSAGE|RECORD|ERECORD|IDENTIFIER)\\b"
 			},
 			{
 				"name": "entity.name.type",
