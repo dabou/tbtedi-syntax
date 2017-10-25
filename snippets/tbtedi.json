@@ -1,8 +1,26 @@
 {
     "Operator": {
         "prefix": "OPERATOR",
-        "body": "OPERATOR(${1|*EQ,*NE,*ISNULL|})",
+        "body": "OPERATOR(${1|*EQ,*NE,*GT,*GE,*LT,*LE,*ISNULL,*ISNOTNULL|})",
         "description": "Conditionnal opérators"
+    },
+    "Condition": {
+        "prefix": "CONDITION",
+        "body": "CONDITION X($1) OPERATOR($2) VALUE($3)",
+        "description": "Conditionnal"
+    },
+    "Link": {
+        "prefix": "LINK",
+        "body": [
+                  "LINK IN($1) OUT($2)",
+                  "ELINK"
+                ],
+        "description": "Link"
+    },
+    "Trigger": {
+        "prefix": "TRIGGER",
+        "body": "TRIGGER IN($1) OUT($2) CARD($3)",
+        "description": "Trigger"
     },
     "Format": {
         "prefix": "FMTIN",
