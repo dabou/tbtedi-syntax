@@ -1,30 +1,85 @@
 {
+    "Link table": {
+        "prefix": "LINKTABLE",
+        "body":[
+                  "LINKTABLE NAME($TM_FILENAME_BASE) TEXT('${1:Description text}') INDSC('${2:input_file_description}.cedsc') OUTDSC('${3:output_file_description}.cedsc') CHECKSUM(0) ICHECKSUM(0) OCHECKSUM(0) MESSAGE('${4:message title (ex: ORDERS), or nothing, DFTMSG by default}')",
+                  "\t$0",
+                  "ELINKTABLE"
+                ],
+        "description": "Link table snippet"
+    },
+    "Declare": {
+        "prefix": "DECLARE",
+        "body":[
+                  "DECLARE\tVAR(${1:VAR_NAME})\tTYPE(${2|*CHAR,*DEC|})",
+                  "$0"
+                ],
+        "description": "Declare variable snippet"
+    },
+    "Type": {
+        "prefix": "TYPE",
+        "body":[
+                  "TYPE(${1|*CHAR,*DEC|})$0"
+                ],
+        "description": "Type snippet"
+    },
     "Operator": {
         "prefix": "OPERATOR",
-        "body": "OPERATOR(${1|*EQ,*NE,*GT,*GE,*LT,*LE,*ISNULL,*ISNOTNULL|})",
-        "description": "Conditionnal opérators"
+        "body": "OPERATOR(${1|*EQ,*NE,*GT,*GE,*LT,*LE,*ISNULL,*ISNOTNULL|})$0",
+        "description": "Conditionnal operator snippet"
     },
     "Condition": {
         "prefix": "CONDITION",
-        "body": "CONDITION X($1) OPERATOR($2) VALUE($3)",
-        "description": "Conditionnal"
+        "body": "CONDITION\tX($1)\tOPERATOR($2|*EQ,*NE,*GT,*GE,*LT,*LE,*ISNULL,*ISNOTNULL|)\tVALUE($3)$0",
+        "description": "Condition snippet for a link"
     },
     "Link": {
         "prefix": "LINK",
         "body": [
-                  "LINK IN($1) OUT($2)",
-                  "ELINK"
+                  "LINK\tIN($1)\tOUT($2)\t$3",
+                  "ELINK",
+                  "$0"
                 ],
-        "description": "Link"
+        "description": "Link in/out snippet"
     },
     "Trigger": {
         "prefix": "TRIGGER",
-        "body": "TRIGGER IN($1) OUT($2) CARD($3)",
-        "description": "Trigger"
+        "body": "TRIGGER\tIN(${1|*FILE,*MSG,or input record name|})\tOUT(${2|*FILE,*MSG,or input record name|})\tCARD(*EACH)$0",
+        "description": "Trigger snippet"
     },
-    "Format": {
+    "Input Date Format": {
         "prefix": "FMTIN",
-        "body": "FMTIN(D/${1|'CYMDhm','CYMD'|})",
-        "description": "Input format"
+        "body": "FMTIN(D/${1|'CYMDhm','CYMD','D/M/CY',*ISO-D,*ISO-T,*ISO-DT|})$0",
+        "description": "Input date formating snippet"
+    },
+    "Output Date Format": {
+        "prefix": "FMTOUT",
+        "body": "FMTOUT(D/${1|'CYMDhm','CYMD','D/M/CY',*ISO-D,*ISO-T,*ISO-DT|})$0",
+        "description": "Output date formating snippet"
+    },
+    "Input Alpha Format": {
+        "prefix": "FMTIN",
+        "body": "FMTIN(A/${1|*UPPER,*LOWER,*QUOTE,*LEN/12,*LENTRIM/12|})$0",
+        "description": "Input alpha formating snippet"
+    },
+    "Output Alpha Format": {
+        "prefix": "FMTOUT",
+        "body": "FMTOUT(A/${1|*UPPER,*LOWER,*QUOTE,*LEN/12,*LENTRIM/12|})$0",
+        "description": "Output alpha formating snippet"
+    },
+    "Input Numeric Format": {
+        "prefix": "FMTIN",
+        "body": "FMTIN(N/${1|'******','*** ***,**'/FR,'000000','000 000,00'/FR,cf. IBM Formatting|})$0",
+        "description": "Input numeric formating snippet"
+    },
+    "Output Numeric Format": {
+        "prefix": "FMTOUT",
+        "body": "FMTOUT(N/${1|'******','*** ***,**'/FR,'000000','000 000,00'/FR,cf. IBM Formatting|})$0",
+        "description": "Output numeric formating snippet"
+    },
+    "Output Substitution Format": {
+        "prefix": "FMTOUT",
+        "body": "FMTOUT(T/${1:Table_name}/${2:search_column_name}/${3:result_column_name}/'${4:default_value}')$0",
+        "description": "Output substitution formating snippet"
     }
 }
