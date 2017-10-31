@@ -69,12 +69,12 @@
     },
     "Input Numeric Format": {
         "prefix": "FMTIN",
-        "body": "FMTIN(N/${1|'******','*** ***,**'/FR,'000000','000 000,00'/FR,cf. IBM Formatting|})$0",
+        "body": "FMTIN(N/${1|'******','*** ***,**'/FR,'000000','000 000\\,00'/FR,cf. IBM Formatting|})$0",
         "description": "Input numeric formating snippet"
     },
     "Output Numeric Format": {
         "prefix": "FMTOUT",
-        "body": "FMTOUT(N/${1|'******','*** ***,**'/FR,'000000','000 000,00'/FR,cf. IBM Formatting|})$0",
+        "body": "FMTOUT(N/${1|'******','*** ***,**'/FR,'000000','000 000\\,00'/FR,cf. IBM Formatting|})$0",
         "description": "Output numeric formating snippet"
     },
     "Output Substitution Format": {
