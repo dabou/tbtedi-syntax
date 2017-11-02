@@ -33,15 +33,6 @@
         "body": "CONDITION\tX($1)\tOPERATOR($2|*EQ,*NE,*GT,*GE,*LT,*LE,*ISNULL,*ISNOTNULL|)\tVALUE($3)$0",
         "description": "Condition snippet for a link"
     },
-    "Link": {
-        "prefix": "LINK",
-        "body": [
-                  "LINK\tIN($1)\tOUT($2)\t$3",
-                  "ELINK",
-                  "$0"
-                ],
-        "description": "Link in/out snippet"
-    },
     "Trigger": {
         "prefix": "TRIGGER",
         "body": "TRIGGER\tIN(${1|*FILE,*MSG,or input record name|})\tOUT(${2|*FILE,*MSG,or input record name|})\tCARD(*EACH)$0",
@@ -81,5 +72,42 @@
         "prefix": "FMTOUT",
         "body": "FMTOUT(T/${1:Table_name}/${2:search_column_name}/${3:result_column_name}/'${4:default_value}')$0",
         "description": "Output substitution formating snippet"
+    },
+    "Link basic in/out": {
+        "prefix": "LINK",
+        "body": [
+                  "LINK\tIN($1)\tOUT($2)\t$3",
+                  "ELINK",
+                  "$0"
+                ],
+        "description": "Link basic in/out snippet"
+    },
+    "Link in/out var": {
+        "prefix": "LINK",
+        "body": [
+                  "LINK\tIN($1)\tOUT(*VAR)\tVAR(${2:var_name_in_declare})\t$3",
+                  "ELINK",
+                  "$0"
+                ],
+        "description": "Link in/out var snippet"
+    },
+    "Link in/out var fonction": {
+        "prefix": "LINK",
+        "body": [
+                  "LINK\tIN($1)\tOUT(*VAR)\tVAR(${2:numeric_var_name_in_declare})\tFCT(${3|*CLR,*INC,*DEC,*SUM,*SUB,*SET|})\t$4",
+                  "ELINK",
+                  "$0"
+                ],
+        "description": "Link in/out var fonction snippet"
+    },
+    "Link in/out constant": {
+        "prefix": "LINK",
+        "body": [
+                  "LINK\tIN($1)\tINX(*CONST)\tOUT($2)\tCONST(${3:const_value})\t$4",
+                  "ELINK",
+                  "$0"
+                ],
+        "description": "Link in/out constant value snippet"
     }
+    
 }
