@@ -108,6 +108,41 @@
                   "$0"
                 ],
         "description": "Link in/out constant value snippet"
+    },
+    "Link error": {
+        "prefix": "LINK",
+        "body": [
+                  "LINK\tIN(BGM001)\tOUT(*ERROR)\tTEXT('BGM C002_1001- Document is not found')",
+                  "\tCONDITION \t(C002_1001)\tOPERATOR(*NE)\tVALUE('220') ",
+                  "ELINK",
+                  "$0"
+                ],
+        "description": "Link error snippet"
+    },
+    "Link warning": {
+        "prefix": "LINK",
+        "body": [
+                  "LINK\tIN(DTM001)\tOUT(*WARNING)\tTEXT('DTM C507_2005 - Date is not correct')",
+                  "\tCONDITION\tX(C507_2005)\tOPERATOR(*NE)\tVALUE('137')",
+                  "\tCONDITION\tX(C507_2005)\tOPERATOR(*NE)\tVALUE('2')",
+                  "ELINK",
+                  "$0"
+                ],
+        "description": "Link warning snippet"
+    },
+    "Link header traces": {
+        "prefix": "LINK",
+        "body": [
+                  "LINK\tIN(*UNB.S002_0004)\tOUT(*TRACE)\tTEXT(*SENDER)",
+                  "ELINK",
+                  "LINK\tIN(*UNB.S003_0010)\tOUT(*TRACE)\tTEXT(*DESTINER)",
+                  "ELINK",
+                  "LINK\tIN(BGM001.1004)\tOUT(*TRACE)\tTEXT(*DOC)",
+                  "ELINK",
+                  "",
+                  "$0"
+                ],
+        "description": "Link header traces snippet"
     }
     
 }
