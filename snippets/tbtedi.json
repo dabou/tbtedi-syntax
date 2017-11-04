@@ -143,6 +143,11 @@
                   "$0"
                 ],
         "description": "Link header traces snippet"
+    },
+    "Function": {
+        "prefix": "FCT",
+        "body": "FCT(${1|*CLR,*INC,*DEC,*SUM,*SUB,*SET|}$0",
+        "description": "Link function snippet"
     }
-    
+
 }
