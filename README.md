@@ -4,6 +4,10 @@ This extension provides TBTEDI config file language support for [Visual Studio C
 Now you can write config file using the excellent IDE-like interface
 that Visual Studio Code provides.
 
+## Preview
+![TBTEDI preview](https://raw.githubusercontent.com/dabou/tbtedi-syntax/master/images/screenshot.png)
+
+
 ## Features
 
 - Syntax highlighting
