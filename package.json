@@ -2,8 +2,8 @@
     "name": "tbtedi-syntax",
     "displayName": "tbtedi-syntax",
     "description": "Support TbtEdi Studio file",
-    "version": "0.0.1",
-    "publisher": "dabou",
+    "version": "0.1.1",
+    "publisher": "tbtedi-syntax",
     "engines": {
         "vscode": "^1.17.0"
     },
@@ -12,7 +12,7 @@
         "Languages",
         "Snippets"
     ],
-    "homepage": "https://github.com/dabou/tbtedi-syntax/blob/master/README.md",
+    "homepage": "https://github.com/dabou/tbtedi-syntax",
     "bugs": {
         "url": "https://github.com/dabou/tbtedi-syntax/issues"
     },
@@ -21,17 +21,29 @@
         "url": "https://github.com/dabou/tbtedi-syntax.git"
     },
     "contributes": {
-        "languages": [{
-            "id": "tbtedi",
-            "aliases": ["Tbtedi", "tbtedi"],
-            "extensions": [".cedsc",".ceguide",".celink",".swptable"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "tbtedi",
-            "scopeName": "source.celink",
-            "path": "./syntaxes/tbtedi.tmLanguage.json"
-        }],
+        "languages": [
+            {
+                "id": "tbtedi",
+                "aliases": [
+                    "Tbtedi",
+                    "tbtedi"
+                ],
+                "extensions": [
+                    ".cedsc",
+                    ".ceguide",
+                    ".celink",
+                    ".swptable"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "tbtedi",
+                "scopeName": "source.celink",
+                "path": "./syntaxes/tbtedi.tmLanguage.json"
+            }
+        ],
         "snippets": [
             {
                 "language": "tbtedi",
